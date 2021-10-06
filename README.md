@@ -11,6 +11,7 @@
 * [License](#license)
 ## Description
 This application allows for a way to quickly generate a professional README.md file for any project
+https://watch.screencastify.com/v/mxweGnHocyRrkUD4B93L
 ## Installation
 You need to install Inquirer package
 ## Usage
