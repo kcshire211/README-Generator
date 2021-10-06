@@ -14,7 +14,6 @@ const questions = [
         type: 'input',
         message: "What is the title of the application?",
         name: 'title',
-        default: 'application title',
         validate: function (answer) {
             if (answer.length < 1) {
                 return console.log("No title provided");
@@ -25,9 +24,8 @@ const questions = [
     
     {
         type: 'input',
-        message: "Please provide a descritption of the application",
+        message: "Please provide a descritption of the application:",
         name: 'description',
-        default: 'description',
         validate: function (answer) {
             if (answer.length < 1) {
                 return console.log("No descritption provided");
@@ -40,7 +38,6 @@ const questions = [
         type: 'input',
         message: "What are the installation instructions for this application?",
         name: 'installation',
-        default: 'installation',
         validate: function (answer) {
             if (answer.length < 1) {
                 return console.log("Please provide valid installation instructions");
@@ -51,9 +48,32 @@ const questions = [
 
     {
         type: 'input',
-        message: "Please enter usage information?",
+        message: "Please enter usage information:",
         name: 'usage',
-        default: 'usage',
+        validate: function (answer) {
+            if (answer.length < 1) {
+                return console.log("Please provide valid usage information");
+            }
+            return true;
+        }
+    },
+
+    {
+        type: 'input',
+        message: "Please enter contribution guidelines:",
+        name: 'contributing',
+        validate: function (answer) {
+            if (answer.length < 1) {
+                return console.log("Please provide valid usage information");
+            }
+            return true;
+        }
+    },
+
+    {
+        type: 'input',
+        message: "What are the test instructions for this application?",
+        name: 'tests',
         validate: function (answer) {
             if (answer.length < 1) {
                 return console.log("Please provide valid usage information");
@@ -74,7 +94,6 @@ const questions = [
         type: 'input',
         message: "What is your Github username?",
         name: 'username',
-        default: 'Github Username',
         validate: function (answer) {
             if (answer.length < 1) {
                 return console.log("Please provide a valid Github username");
@@ -87,7 +106,6 @@ const questions = [
         type: 'input',
         message: "What is your email address?",
         name: 'email',
-        default: 'email',
         validate: function (answer) {
             if (answer.length < 1) {
                 return console.log("Please provide a valid email address");

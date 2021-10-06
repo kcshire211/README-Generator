@@ -25,9 +25,7 @@ function renderLicenseSection(license) {
   if(license === "none"){
     return ""
   } else {
-    return `##License
-${license}`
-    
+    return `${license}`
   }
 }
 
@@ -39,6 +37,8 @@ function generateMarkdown(data) {
 * [Description](#description)
 * [Installation](#installation)
 * [Usage](#usage)
+* [Contributing](#contributing)
+* [Tests](#tests)
 ${renderLicenseLink(data.license)}
 * [Questions](#questions)
 ${renderLicenseLink(data.license)}
@@ -48,10 +48,15 @@ ${data.description}
 ${data.installation}
 ## Usage
 ${data.usage}
+## Contributing
+${data.contributing}
+## Tests
+${data.tests} <br>
+## License
 ${renderLicenseSection(data.license)}
 ## Questions?
 https://github.com/${data.username}/repo.git <br>
-Reach me by email at <br> ${data.email}
+Reach me by email at: <br> ${data.email}
 `;
 }
 
